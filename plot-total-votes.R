@@ -1,6 +1,7 @@
 #
 # Rscript banei-votes-2020.csv $round
 # $round = 通算開催数
+# グラフをRplot.pdfに出力する
 #
 
 data <- read.csv("banei-votes-2020.csv", header=T)
