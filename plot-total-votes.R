@@ -8,7 +8,7 @@ data <- read.csv("banei-votes-2020.csv", header=T)
 
 races <- NULL
 
-round <- as.integer(commandArgs(trailingOnly=TRUE)[1])# 引数としてとった値を整数に変換
+round <- as.integer(commandArgs(trailingOnly=TRUE)[1])# 引数としてとった文字列（$round）を整数に変換
 round <- round - 1
 
 n <- round:0
