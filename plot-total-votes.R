@@ -1,12 +1,11 @@
 data <- read.csv("banei-votes-2020.csv", header=T)
 #data[,1] <- as.Date(data[,1], "%Y-%m-%d")
 
-races <- cbind(#
-data[45:55,3],
-data[34:44,3],
-data[23:33,3],
-data[12:22,3],
-data[1:11,3])
+races <- NULL
+
+for (i in 4:0){
+    races <- cbind(races, data[(11 * i + 1) : (11 + 11 * i), 3])
+}
 
 par(bg="black", fg="white",
 col.axis="white", col.lab="white", cex.lab=1.5)
