@@ -31,4 +31,4 @@ xlab="race #", ylab="total votes")
 axis(side=1,at=1:11)
 
 matpoints(data[1:11,2], data[(11 * round + 1) : (11 + 11 * round), 3],
-type="l", lwd=6, col="white")# 最新は白線で表す
+type="o", pch=5, lwd=6, col="white")# 最新は白線で表す
