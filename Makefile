@@ -7,10 +7,12 @@ status:
 
 plot-race:
 	Rscript plot-total-votes_par-race.R $(CSVFILE) $(ROUND)
-	mv Rplots.pdf par-race.pdf
+	cp Rplots.pdf par-race.pdf
+	rm Rplots.pdf
 	open par-race.pdf
 
 plot-round:
 	Rscript plot-total-votes_par-round.R $(CSVFILE) $(ROUND)
-	mv Rplots.pdf par-round.pdf
+	cp Rplots.pdf par-round.pdf
+	rm Rplots.pdf
 	open par-round.pdf
