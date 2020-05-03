@@ -2,7 +2,7 @@
 # Rscript banei-votes-2020.csv $CSVfile $round
 # $CSVfile = データ元CSV
 # $round = 通算開催数
-# グラフをRplot.pdfに出力する
+# レース毎の投票数グラフをRplot.pdfに出力する
 #
 
 CSVfile <- commandArgs(trailingOnly=TRUE)[1]
