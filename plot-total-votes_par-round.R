@@ -44,7 +44,7 @@ for (i in 0 : round){
 
 #total_votes_date_month_day
 
-total_votes_round <- as.integer(total_votes[1 : 6, 2])
+total_votes_round <- as.integer(total_votes[1 : (round + 1), 2])
 #total_votes_round
 
 plot(xlim = c(1, round + 1), total_votes_round,
@@ -56,9 +56,13 @@ labels = total_votes_date_month_day, at = 1 : (round + 1))
 
 votes_mean <- mean(total_votes_round)
 #votes_mean
+votes_mean_wo_1st <- mean(total_votes_round[2 : (round + 1)])
+#votes_mean_wo_1st
 
-abline(h = votes_mean,
-lwd = 3, col = "yellow")
+abline(h = c(votes_mean, votes_mean_wo_1st),
+lwd = 3, col = c("yellow", "pink"))
 
-legend("topright", legend = votes_mean, title = "mean",
+legend("topright", legend = c(votes_mean), title = "mean",
 lty = 1, col = c("yellow"), lwd = 3)
+legend("bottomleft", legend = c(votes_mean_wo_1st), title = "mean w/o 4/24",
+lty = 1, col = c("pink"), lwd = 3)
