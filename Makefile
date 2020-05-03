@@ -1,9 +1,11 @@
 CSVFILE := banei-votes-2020.csv
 
-all: plot-race plot-round
+all: status
 
 status:
 	git status .
+
+double: plot-race plot-round
 
 plot-race:
 	Rscript plot-total-votes_par-race.R $(CSVFILE) $(ROUND)
