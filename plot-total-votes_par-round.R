@@ -15,7 +15,7 @@ round <- as.integer(commandArgs(trailingOnly = TRUE)[2])# 引数としてとっ�
 round <- round - 1
 
 for (i in 0 : round){
-    races <- rbind(races, sum(data[(11 * i + 1) : (11 + 11 * i), 3]))
+    races <- rbind(races, sum(data[(11 * i + 1) : (11 + 11 * i), 3] - data[(11 * i + 1) : (11 + 11 * i), 4]))
 }
 
 round_date <- NULL
@@ -45,7 +45,7 @@ for (i in 0 : round){
 #total_votes_date_month_day
 
 total_votes_round <- as.integer(total_votes[1 : (round + 1), 2])
-#total_votes_round
+total_votes_round
 
 plot(xlim = c(1, round + 1), total_votes_round,
 type = "o", pch = 5, lwd = 3, col = "white",

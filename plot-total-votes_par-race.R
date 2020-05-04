@@ -17,7 +17,7 @@ round <- round - 1
 n <- 0 : round
 
 for (i in n){
-    races <- cbind(races, data[(11 * i + 1) : (11 + 11 * i), 3])
+    races <- cbind(races, data[(11 * i + 1) : (11 + 11 * i), 3] - data[(11 * i + 1) : (11 + 11 * i), 4])
 }
 
 par(bg = "black", fg = "white",
