@@ -26,7 +26,8 @@ col.axis = "white", col.lab = "white", cex.lab = 1.5)
 matplot(data[1 : 11, 2], races,
 type = "l", lwd = 3,
 xaxt = "n",
-xlab = "race #", ylab = "total votes", col = c(2 : (round + 1)))
+xlab = "race #", ylab = "total votes",
+lty = 1, col = c(2 : (round + 1)))
 
 race_number <- NULL
 
