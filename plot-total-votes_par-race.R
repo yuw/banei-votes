@@ -20,8 +20,6 @@ for (i in n){
     races <- cbind(races, data[(11 * i + 1) : (11 + 11 * i), 3])
 }
 
-races
-
 par(bg = "black", fg = "white",
 col.axis = "white", col.lab = "white", cex.lab = 1.5)
 
