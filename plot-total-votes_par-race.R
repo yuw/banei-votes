@@ -14,11 +14,11 @@ races <- NULL
 round <- as.integer(commandArgs(trailingOnly = TRUE)[2])# 引数としてとった文字列（$round）を整数に変換
 round <- round - 1
 
-n <- 0 : round
-
-for (i in n){
+for (i in 0 : round){
     races <- cbind(races, data[(11 * i + 1) : (11 + 11 * i), 3] - data[(11 * i + 1) : (11 + 11 * i), 4])
 }
+
+races[, (round - 4) : (round + 1)]
 
 par(bg = "black", fg = "white",
 col.axis = "white", col.lab = "white", cex.lab = 1.5)

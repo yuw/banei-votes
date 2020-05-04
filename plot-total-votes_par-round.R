@@ -42,10 +42,10 @@ for (i in 0 : round){
     paste(total_votes_date[i + 1]$mon + 1, total_votes_date[i + 1]$mday, sep = "/"))
 }
 
-#total_votes_date_month_day
-
 total_votes_round <- as.integer(total_votes[1 : (round + 1), 2])
-total_votes_round
+
+rbind(total_votes_date_month_day[(round - 4) : (round + 1)],
+total_votes_round[(round - 4) : (round + 1)])
 
 plot(xlim = c(1, round + 1), total_votes_round,
 type = "o", pch = 5, lwd = 3, col = "white",
