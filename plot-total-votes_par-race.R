@@ -30,7 +30,7 @@ matplot(data[1 : 11, 2], races,
 type = "l", lwd = 3,
 xaxt = "n",
 xlab = "race #", ylab = "total votes",
-lty = 1, col = rainbow_hcl((round + 1), c = 75))
+lty = 1, col = rainbow_hcl((round + 1), c = 150))
 
 race_number <- NULL
 
