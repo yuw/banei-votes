@@ -5,6 +5,9 @@
 # レース毎の投票数グラフをRplot.pdfに出力する
 #
 
+#install.packages("colorspace", dependencies = TRUE)
+library(colorspace)# 折れ線の色制御のため
+
 CSVfile <- commandArgs(trailingOnly = TRUE)[1]
 
 data <- read.csv(CSVfile, header = T)
@@ -27,7 +30,7 @@ matplot(data[1 : 11, 2], races,
 type = "l", lwd = 3,
 xaxt = "n",
 xlab = "race #", ylab = "total votes",
-lty = 1, col = c(2 : (round + 1)))
+lty = 1, col = rainbow_hcl((round + 1), c = 75))
 
 race_number <- NULL
 
