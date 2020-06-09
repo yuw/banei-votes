@@ -1,4 +1,5 @@
 CSVFILE := banei-votes-2020.csv
+OFFICIALCSVFILE := official-sales-2020.csv
 
 all: status
 
@@ -18,3 +19,9 @@ plot-round:
 	cp Rplots.pdf par-round.pdf
 	rm Rplots.pdf
 	open par-round.pdf
+
+official-salse:
+	Rscript plot-official-sales.R $(OFFICIALCSVFILE) $(ROUND)
+	cp Rplots.pdf official-sales.pdf
+	rm Rplots.pdf
+	open official-sales.pdf
