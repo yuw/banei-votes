@@ -20,7 +20,7 @@ plot-round:
 	rm Rplots.pdf
 	open par-round.pdf
 
-official-salse:
+official-sales:
 	Rscript plot-official-sales.R $(OFFICIALCSVFILE) $(ROUND)
 	cp Rplots.pdf official-sales.pdf
 	rm Rplots.pdf
