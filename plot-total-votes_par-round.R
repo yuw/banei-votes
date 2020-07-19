@@ -15,13 +15,13 @@ round <- as.integer(commandArgs(trailingOnly = TRUE)[2])# 引数としてとっ�
 round <- round - 1
 
 for (i in 0 : round){
-    races <- rbind(races, sum(data[(11 * i + 1) : (11 + 11 * i), 3] - data[(11 * i + 1) : (11 + 11 * i), 4]))
+    races <- rbind(races, sum(data[(12 * i + 1) : (12 + 12 * i), 3] - data[(12 * i + 1) : (12 + 12 * i), 4], na.rm = TRUE))
 }
 
 round_date <- NULL
 
 for (i in 0 : round){
-    round_date <- rbind(round_date, data[(11 * i + 1), 1])
+    round_date <- rbind(round_date, data[(12 * i + 1), 1])
 }
 
 total_votes <- cbind(round_date, races)
